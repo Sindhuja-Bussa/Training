@@ -1,0 +1,205 @@
+Classes
+class Siva:
+    def gold(war):
+        print("p-12000")
+    def car(war):
+        print("p-14000")
+class Baby1(Siva):
+    def bank(war):
+        print("d-10000")
+class Baby2(Siva):
+    def jewel(war):
+        print("d-15000")
+class gbaby(Baby1):
+    def toy(war):
+        print("")
+b1=Baby2()
+b1.jewel()
+b1.gold()
+b1.car()
+b2=gbaby()
+b2.toy
+b2.bank()
+b3=Baby1()
+b3.bank()
+b3.gold()
+b3.car()
+
+
+
+
+class Siva:
+    def __init__(mango):
+        print("def constuctor")
+    def __init__(mango1,mango2):
+        
+        print("constuctor",mango2) 
+    def __bank__(india):
+        print("Test1")
+    def jeno(war):
+        print("Test2")
+    def jeff(war):
+        print("Test3")
+s=Siva(200)
+s.jeno()
+s.jeff()
+s.__bank__()
+
+task for magical prime and neon number
+class Siva:
+    def gold(war):
+        print("p-12000")
+    def car(war):
+        print("p-14000")
+class Baby1(Siva):
+    def magicalprime(war):
+        n=int(input("enter a number for checking magical prime or not:"))
+        for i in range(2,n):
+            if(n%i==0):
+                break
+            else:
+                rev=0
+                while(n>0):
+                    x=n%10
+                    rev=(rev*10)+x
+                    n=n//10
+        for j in range(2,rev):
+            
+            if(rev%j==0):
+               print("is not a magical number")
+               break
+            else:
+               print("is a magical number")
+               break
+class Baby2(Siva):
+    def neonnumber(war):
+        n=int(input("enter a number for checking neon number or not:"))
+        s=0
+        sqr=n*n
+        while(sqr>0):
+            s=s+sqr%10
+            sqr=sqr//10
+        if(n==s):
+            print("neon number")
+        else:
+            print("not a neon number")
+            
+b1=Baby1()
+b1.magicalprime()
+b2=Baby2()
+b2.neonnumber()
+
+#include <stdio.h>
+
+int main() {
+    int lemon;
+    scanf("%d",&lemon);
+    int r=21;
+    lemon<r?printf("required lemons=%d",r-lemon):lemon>r?printf("lemon exceeded=%d",lemon-r):printf("sufficient lemons are present")
+    return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a[10][10],n,i,j,rowsum,colsum,rcount0=0,rcount1=0,ccount1=0,ccount0=0,drcount0=0,drcount1=0,dlcount0=0,dlcount1=0;
+	short x,dlsum,drsum;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			printf("%d",a[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<n;i++)
+	{
+		rowsum=0;
+		for(j=0;j<n;j++)
+		{
+			rowsum=rowsum+a[i][j];
+			x=rowsum;
+		}
+		if(rowsum==4)
+	    {
+		   rcount1++;
+	    }
+    	else if(rowsum==0)
+	    {
+	       rcount0++;
+    	}
+	}
+	printf("\n 1's horizantal count=%hi",rcount1);
+	printf("\n 0's horizantal count=%hi",rcount0);
+	for(j=0;j<n;j++)
+	{
+		colsum=0;
+		for(i=0;i<n;i++)
+		{
+			colsum=colsum+a[i][j];
+			x=colsum;
+		}
+		if(colsum==4)
+	    {
+		   ccount1++;
+	    }
+    	else if(colsum==0)
+	    {
+	       ccount0++;
+    	}
+	}
+	printf("\n 1's vertical count=%hi",ccount1);
+	printf("\n 0's vertical count=%hi",ccount0);
+	dlsum=0;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			if(i==j){
+			 dlsum=dlsum+a[i][j];
+			 x=dlsum;
+		}
+		}
+		if((dlsum==4))
+		{
+		    dlcount1++;
+		}
+		else if(dlsum==0)
+		{
+			dlcount0++;
+		}
+	}
+	printf("\n 1's leftdia count=%hi",dlcount1);
+	printf("\n 0's leftdia count=%hi",dlcount0);
+		drsum=0;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			if(i+j==n-1){
+			 drsum=drsum+a[i][j];
+			 x=drsum;
+		}
+		}
+		if((drsum==4))
+		{
+		    drcount1++;
+		}
+		else if(drsum==0)
+		{
+			drcount0++;
+		}
+	}
+	printf("\n 1's rightdia count=%hi",drcount1);
+	printf("\n 0's rightdia count=%hi",drcount0);
+}
